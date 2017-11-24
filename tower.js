@@ -91,6 +91,11 @@ var Tower = function (uiRef, waveController) {
         var y = (enemySprite.position.y) - position.y;
         laser.rotation = Math.atan2(y, x);
 
+        var laserAttack = new Howl({
+            src: ['res/laser.wav']
+        });
+        laserAttack.play();
+
         self.stage.addChild(laser);
     };
 

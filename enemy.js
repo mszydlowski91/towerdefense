@@ -42,6 +42,10 @@ var Enemy = function (infoUI, enemyVars, windowSize) {
 
         if (this.health <= 0) {
             this.killed = true;
+            var roar = new Howl({
+                src: ['res/death.ogg']
+            });
+            roar.play();
             infoUI.incrementCash(this.worth);
         }
     };
