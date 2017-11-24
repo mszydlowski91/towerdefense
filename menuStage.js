@@ -73,7 +73,7 @@ var MenuStage = function (stage, json) {
         // position button to go after other buttons
         levelSprite.position.set(sinceBeginning + margin, margin);
 
-        sinceBeginning += levelSprite.width + margin;
+        sinceBeginning += levelSprite.width + margin + 250;
         setupListeners(levelSprite);
 
         var levelText = generateLevelText(sinceBeginning, margin, jsonLevel);
@@ -159,8 +159,6 @@ var MenuStage = function (stage, json) {
             gameStage = new GameStage(stage, jsonLevel);
             gameStage.createStage();
         });
-
-
     };
 
     /**
