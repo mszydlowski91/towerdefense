@@ -51,7 +51,6 @@ function addNun () {
         }
     };
 
-    console.log("here");
 
     app.ticker.add(tickHandler);
 
