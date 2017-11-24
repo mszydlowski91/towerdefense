@@ -65,7 +65,7 @@ var InfoUi = function (json, stage) {
      */
     this.setCash = function (money) {
         cash = money;
-        infoBar.children[3].setText("Cash: " + cash);
+        infoBar.children[3].setText("Złote obierki: " + cash);
     };
 
     /**
@@ -83,7 +83,7 @@ var InfoUi = function (json, stage) {
      */
     this.setLives = function (difLives) {
         lives = difLives;
-        infoBar.children[2].setText("Lives: " + lives);
+        infoBar.children[2].setText("Mroczne życia: " + lives);
 
         if (lives <= 0) {
             gameOver = true;
