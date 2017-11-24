@@ -23,7 +23,7 @@ var InfoUi = function (json, stage) {
         infoBar = new PIXI.DisplayObjectContainer();
         var startingPoint = 0;
         //(window.innerWidth / 2) - (window.innerHeight / 2);
-        var infoText = ["Level: " + level, "Waves: " + waves, "Lives: " + lives, "Cash: " + cash];
+        var infoText = ["Poziom: " + level, "Procesje: " + waves, "Mroczne życia: " + lives, "Złote obierki: " + cash];
 
         for (var i = 0; i < infoText.length; i++) {
             var previousText = this.createText(startingPoint, infoText[i]);
