@@ -65,7 +65,7 @@ var MenuStage = function (stage, json) {
 
         // percentage used in calculations for margin and button size
         var heightPercentage = 0.8;
-        var widthPercentage = 0.75;
+        var widthPercentage = 0.8;
         // scale sprite to defined size
         levelSprite.scale.set(window.innerWidth / levelSprite.width * widthPercentage, window.innerHeight / levelSprite.height * heightPercentage);
         // position to create margin = height * percentage/2 (100-defined), divided by 2 to achieve same margin from bottom and top
@@ -73,7 +73,7 @@ var MenuStage = function (stage, json) {
         // position button to go after other buttons
         levelSprite.position.set(sinceBeginning + margin, margin);
 
-        sinceBeginning += levelSprite.width + margin + 250;
+        sinceBeginning += levelSprite.width + margin - 250;
         setupListeners(levelSprite);
 
         var levelText = generateLevelText(sinceBeginning, margin, jsonLevel);
@@ -111,7 +111,7 @@ var MenuStage = function (stage, json) {
         // text field
         var levelText = new PIXI.Text(jsonLevel.name, { font: "2vw Snippet", fill: "white", align: "left"});
         // could be modified to be more dynamic in case screens are extra small or level names are long
-        levelText.position.x = sinceBeginning - levelText.width - margin;
+        levelText.position.x = sinceBeginning - levelText.width ;
         levelText.position.y = window.innerHeight - (margin * 2);
 
         return levelText;
