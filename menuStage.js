@@ -65,7 +65,7 @@ var MenuStage = function (stage, json) {
 
         // percentage used in calculations for margin and button size
         var heightPercentage = 0.8;
-        var widthPercentage = 0.43;
+        var widthPercentage = 0.75;
         // scale sprite to defined size
         levelSprite.scale.set(window.innerWidth / levelSprite.width * widthPercentage, window.innerHeight / levelSprite.height * heightPercentage);
         // position to create margin = height * percentage/2 (100-defined), divided by 2 to achieve same margin from bottom and top
