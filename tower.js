@@ -107,10 +107,22 @@ var Tower = function (uiRef, waveController) {
     this.build = function (tile, stage) {
         // build circle to represent tower
         this.lineStyle(1, 0xFF0000, 1);
-        this.beginFill(this.towerColor);
-        this.drawCircle(tile.position.x + tile.width / 2, tile.position.y + tile.height / 2, tile.scale.x * 10);
+        // this.beginFill(this.towerColor);
+        // this.drawCircle(tile.position.x + tile.width / 2, tile.position.y + tile.height / 2, tile.scale.x * 10);
+        var images = ['res/gander.jpg', 'res/demon.png'];
+        var index = Math.floor(2*Math.random());
+        var scale = 0.15;
+        if(index === 1) {
+            scale *= 5;
+        }
+        var texture = PIXI.Texture.fromImage(images[index]);
+        var sprite = new PIXI.Sprite(texture);
+        sprite.scale.set(scale);
+        sprite.x = tile.position.x;
+        sprite.y = tile.position.y;
+        stage.addChild(sprite);
         // setting hit area so click event could be fired
-        this.hitArea = new PIXI.Rectangle(tile.position.x, tile.position.y, tile.width, tile.height);
+        // this.hitArea = new PIXI.Rectangle(tile.position.x, tile.position.y, tile.width, tile.height);
         this.saveTileValues(tile);
         // update UI/set variables
         var newCash = uiRef.getCash() - this.getCost();
