@@ -97,6 +97,7 @@ var MenuStage = function (stage, json) {
         sprite.mouseout = mouseOut;
 //        levelSprite.touchend = levelSprite.touchendoutside = mouseOut;
         sprite.click = click;
+        sprite.tap = click;
 //        levelSprite.tap = click;
     };
 

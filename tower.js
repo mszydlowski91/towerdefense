@@ -119,6 +119,7 @@ var Tower = function (uiRef, waveController) {
         // setup tower event listener
         this.interactive = true;
         this.click = click;
+        this.tap = click;
         //        tilingSprite.tap = click;
 
         // add tower sprite/shape to stage

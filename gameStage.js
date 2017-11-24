@@ -106,6 +106,7 @@ var GameStage = function (stage, json) {
 //        tilingSprite.touchend = tilingSprite.touchendoutside = mouseOut;
         // enable only for browser
         tilingSprite.click = click;
+        tilingSprite.tap = click;
 //        tilingSprite.tap = click;
 
         return tilingSprite;
